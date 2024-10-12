@@ -19,6 +19,7 @@ return new class extends Migration
             $table->String('descripcion')->nullable();
             $table->integer('precio_compra');
             $table->integer('precio_venta');
+            $table->softDeletes();
         });
     }
 

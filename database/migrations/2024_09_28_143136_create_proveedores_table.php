@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String('cedula');
             $table->String('correo')->unique();
             $table->integer('telefono')->nullable();
+            $table->softDeletes();
         });
     }
 

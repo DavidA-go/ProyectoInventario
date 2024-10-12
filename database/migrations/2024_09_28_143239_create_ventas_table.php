@@ -20,6 +20,7 @@ return new class extends Migration
             $table->String('valor_unitario');
             $table->String('soporte_compra');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

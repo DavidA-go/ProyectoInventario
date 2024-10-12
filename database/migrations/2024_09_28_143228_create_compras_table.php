@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('precio_compra');
             $table->integer('valor_unitario');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

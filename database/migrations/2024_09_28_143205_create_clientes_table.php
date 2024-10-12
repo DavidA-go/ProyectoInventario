@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String('correo');
             $table->String('telefono')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
