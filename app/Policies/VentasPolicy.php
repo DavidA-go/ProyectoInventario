@@ -13,7 +13,7 @@ class VentasPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminVentas']);//
     }
 
     /**
@@ -21,7 +21,7 @@ class VentasPolicy
      */
     public function view(User $user, Ventas $ventas): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminVentas']);//
     }
 
     /**
@@ -29,7 +29,7 @@ class VentasPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminVentas']);//
     }
 
     /**
@@ -37,7 +37,7 @@ class VentasPolicy
      */
     public function update(User $user, Ventas $ventas): bool
     {
-        return $user->hasRole(['Admin']);
+        return $user->hasRole(['Admin', 'AdminVentas']);
     }
 
     /**
@@ -45,7 +45,7 @@ class VentasPolicy
      */
     public function delete(User $user, Ventas $ventas): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminVentas']);//
     }
 
     /**
@@ -53,7 +53,7 @@ class VentasPolicy
      */
     public function restore(User $user, Ventas $ventas): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminVentas']);//
     }
 
     /**
@@ -61,6 +61,6 @@ class VentasPolicy
      */
     public function forceDelete(User $user, Ventas $ventas): bool
     {
-        return $user->hasRole(['Admin']);
+        return $user->hasRole(['Admin', 'AdminVentas']);
     }
 }

@@ -13,7 +13,7 @@ class ProveedoresPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -21,7 +21,7 @@ class ProveedoresPolicy
      */
     public function view(User $user, Proveedores $proveedores): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -29,7 +29,7 @@ class ProveedoresPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -37,7 +37,7 @@ class ProveedoresPolicy
      */
     public function update(User $user, Proveedores $proveedores): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -45,7 +45,7 @@ class ProveedoresPolicy
      */
     public function delete(User $user, Proveedores $proveedores): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -53,7 +53,7 @@ class ProveedoresPolicy
      */
     public function restore(User $user, Proveedores $proveedores): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 
     /**
@@ -61,6 +61,6 @@ class ProveedoresPolicy
      */
     public function forceDelete(User $user, Proveedores $proveedores): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminProveedores']);//
     }
 }

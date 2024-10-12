@@ -13,7 +13,7 @@ class ProductosPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -21,7 +21,7 @@ class ProductosPolicy
      */
     public function view(User $user, Productos $productos): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -29,7 +29,7 @@ class ProductosPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductosPolicy
      */
     public function update(User $user, Productos $productos): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -45,7 +45,7 @@ class ProductosPolicy
      */
     public function delete(User $user, Productos $productos): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -53,7 +53,7 @@ class ProductosPolicy
      */
     public function restore(User $user, Productos $productos): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 
     /**
@@ -61,6 +61,6 @@ class ProductosPolicy
      */
     public function forceDelete(User $user, Productos $productos): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'Bodega']);//
     }
 }

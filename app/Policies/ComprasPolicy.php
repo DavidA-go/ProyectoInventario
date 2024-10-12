@@ -13,7 +13,7 @@ class ComprasPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -21,7 +21,7 @@ class ComprasPolicy
      */
     public function view(User $user, Compras $compras): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -29,7 +29,7 @@ class ComprasPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -37,7 +37,7 @@ class ComprasPolicy
      */
     public function update(User $user, Compras $compras): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -45,7 +45,7 @@ class ComprasPolicy
      */
     public function delete(User $user, Compras $compras): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -53,7 +53,7 @@ class ComprasPolicy
      */
     public function restore(User $user, Compras $compras): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 
     /**
@@ -61,6 +61,6 @@ class ComprasPolicy
      */
     public function forceDelete(User $user, Compras $compras): bool
     {
-        return $user->hasRole(['Admin']);//
+        return $user->hasRole(['Admin', 'AdminCompras']);//
     }
 }
